@@ -49,6 +49,8 @@ class Login extends React.Component {
         console.log(response)
         localStorage.setItem('jwt', response.data.auth_token)
         localStorage.setItem('myProfile', response.data.user.id)
+        localStorage.setItem('myUserName', response.data.user.username)
+        localStorage.setItem('myProfileImage', response.data.user.profile_picture)
         sessionStorage.setItem('clickCount', 10)
         this.props.setUser()
       })
