@@ -66,7 +66,7 @@ class App extends React.Component {
             return (<UserProfilePage users={this.state.users} {...props} />
             )
           }} />
-          <Route exact path="/profile" render={props => {
+          <Route exact path="/profile" component={props => {
             return (<MyProfilePage me={this.state.me} {...props} />
             )
           }} />
