@@ -14,7 +14,7 @@ class MyProfile extends React.Component {
 
   componentDidMount() {
     const jwt = localStorage.getItem('jwt')
-    const myUserName = localStorage.getItem('myUsername')
+    const myUserName = localStorage.getItem('myUserName')
     const myProfileImage = localStorage.getItem('myProfileImage')
     const myProfile = localStorage.getItem('myProfile')
 
@@ -22,7 +22,7 @@ class MyProfile extends React.Component {
       method: 'get',
       url: `https://insta.nextacademy.com/api/v1/images/me`,
       headers: {
-        Authorization: `Bearer ${jwt} ${myProfile}`
+        Authorization: `Bearer ${jwt}`
       }
     })
       .then(result => {
